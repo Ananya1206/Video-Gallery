@@ -1,0 +1,64 @@
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container{
+  position: relative;
+  background:white;
+}
+.container h1{
+  color:black;
+  font-size:50px;
+  margin:2rem 0;
+  font-family: "Lucida Handwriting", cursive;
+  text-align: center;
+  text-shadow: 2px 2px 5px grey;
+}
+.video-container{
+  display: flex;
+  justify-content: center;
+  flex-wrap:wrap;
+}
+.video-container .video{
+  height:15rem;
+  width:25rem;
+  margin:2rem;
+  box-shadow:0 0 5px 5px black ;
+  overflow: hidden;
+  border-radius:10px;
+}
+ .video-container .video video{
+  height: 100%;
+  width:100%;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  object-fit: cover;
+}
+.video-container .video video:hover{
+  transition: .2s linear;
+  transform: scale(1.5);
+}
+.popup-video{
+  position: fixed;
+  top:0;
+  left: 0;
+  z-index:1;
+  height: 100%;
+  width: 100%;
+  display: none;
+  background: black;
+}
+.popup-video video{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  width:60%;
+  height:80%;
+  border-radius: 10px;
+  background: black;
+  box-shadow:0 0 5px 5px white ;
+  object-fit: cover;
+}
